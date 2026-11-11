@@ -1,24 +1,23 @@
 import java.util.Stack;
 public class B1047RemoveDuplicates {
     public static void main(String[] args){
-        String s = "abbaca";
+        String s = "azxxzy";
         System.out.println(removeDuplicates(s));
     }
     public static String removeDuplicates(String s){
-        Stack<Character> stack =  new Stack<>();
+        Stack<Character> stack = new Stack<>();
         for(int i = 0; i < s.length(); i++){
             char c = s.charAt(i);
-            if(!stack.isEmpty() && stack.peek() == c){
+            if(!stack.isEmpty() && c == stack.peek()){
                 stack.pop();
-            }
-            else{
+            }else{
                 stack.push(c);
             }
         }
-        StringBuilder ketQua = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         while(!stack.isEmpty()){
-            ketQua.append(stack.pop());
+            sb.append(stack.pop());
         }
-        return ketQua.reverse().toString();
+        return sb.reverse().toString();
     }
 }
