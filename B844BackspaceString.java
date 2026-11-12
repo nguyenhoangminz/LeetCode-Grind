@@ -1,8 +1,8 @@
 import java.util.Stack;
 public class B844BackspaceString {
     public static void main(String[] args){
-        String s = "a#c";
-        String t = "b";
+        String s = "a##c";
+        String t = "c";
         System.out.println(backspaceCompare(s, t));
     }
     public static boolean backspaceCompare(String s, String t){
@@ -14,6 +14,7 @@ public class B844BackspaceString {
                 if(!stackS.isEmpty()){
                     stackS.pop();
                 }
+            
             }else{
                 stackS.push(c);
             }
