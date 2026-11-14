@@ -1,7 +1,6 @@
 import java.util.Stack;
 public class B150EvaluateReverse {
     public static void main(String[] args){
-
     }
     public static int evalRPN(String[] tokens){
         // Duyệt qua từng mảng trong chuỗi
